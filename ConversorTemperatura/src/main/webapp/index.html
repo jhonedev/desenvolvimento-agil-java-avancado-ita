@@ -1,0 +1,20 @@
+<html>
+<head>
+    <title>Conversor de Temperatura</title>
+</head>
+<body>
+    <h1>Conversor de Temperatura</h1>
+    <form action="converter" method="POST">
+        <label>Valor a ser convertido:</label>
+        <input type="text" name="valor" required><br><br>
+        
+        <label>Escolha a conversão:</label>
+        <select name="tipoConversao">
+            <option value="celsiusParaFahrenheit">Celsius para Fahrenheit</option>
+            <option value="fahrenheitParaCelsius">Fahrenheit para Celsius</option>
+        </select><br><br>
+        
+        <input type="submit" value="Converter">
+    </form>
+</body>
+</html>
