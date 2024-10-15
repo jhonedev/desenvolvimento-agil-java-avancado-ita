@@ -1,7 +1,6 @@
 package com.conversor;
 
 import java.io.IOException;
-
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -25,9 +24,37 @@ public class ConversorServlet extends HttpServlet {
         }
 
         response.setContentType("text/html");
-        response.getWriter().println("<html><body>");
+        response.getWriter().println("<!DOCTYPE html>");
+        response.getWriter().println("<html lang='pt-BR'>");
+        response.getWriter().println("<head>");
+        response.getWriter().println("<meta charset='UTF-8'>");
+        response.getWriter().println("<title>Resultado da Conversão</title>");
+        response.getWriter().println("<style>");
+        response.getWriter().println("body {");
+        response.getWriter().println("    font-family: Arial, sans-serif;");
+        response.getWriter().println("    background-color: #e0f7fa;"); // Azul claro
+        response.getWriter().println("    color: #333;");
+        response.getWriter().println("    display: flex;");
+        response.getWriter().println("    flex-direction: column;");
+        response.getWriter().println("    align-items: center;");
+        response.getWriter().println("    justify-content: center;");
+        response.getWriter().println("    height: 100vh;");
+        response.getWriter().println("    margin: 0;");
+        response.getWriter().println("}");
+        response.getWriter().println("h1 {");
+        response.getWriter().println("    color: #007BFF;");
+        response.getWriter().println("}");
+        response.getWriter().println("p {");
+        response.getWriter().println("    font-size: 24px;");
+        response.getWriter().println("    margin: 20px 0;");
+        response.getWriter().println("}");
+        response.getWriter().println("</style>");
+        response.getWriter().println("</head>");
+        response.getWriter().println("<body>");
         response.getWriter().println("<h1>Resultado da Conversão</h1>");
+        response.getWriter().println("<p>Valor original: " + valorOriginal + "</p>");
         response.getWriter().println("<p>Valor convertido: " + valorConvertido + "</p>");
-        response.getWriter().println("</body></html>");
+        response.getWriter().println("</body>");
+        response.getWriter().println("</html>");
     }
 }
